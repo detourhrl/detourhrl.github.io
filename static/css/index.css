@@ -112,6 +112,26 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+.teaser-figure {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+}
+
+.teaser-caption {
+  max-width: 46rem;
+  margin: 1.75rem auto 0;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
 
 /* Publication Content Styling */
 .publication-title {
