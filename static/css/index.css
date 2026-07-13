@@ -127,7 +127,7 @@ body {
   margin: 1.75rem auto 0;
   font-size: 1rem;
   font-weight: 400;
-  font-style: italic;
+  font-style: bold;
   line-height: 1.65;
   color: var(--text-secondary);
 }
@@ -617,6 +617,121 @@ code {
   flex-shrink: 0;
 }
 
+.latex-table{
+    border-collapse:collapse;
+    margin:auto;
+    font-family: "Times New Roman", Georgia, serif;
+    font-size:17px;
+    width:90%;
+}
+
+.latex-table th,
+.latex-table td{
+    padding:6px 14px;
+    vertical-align:middle;
+}
+
+.latex-table thead tr{
+    border-top:2.5px solid black;
+    border-bottom:1.4px solid black;
+}
+
+.latex-table tbody tr:last-child{
+    border-bottom:2.5px solid black;
+}
+
+.section-divider td{
+    padding:2px 14px;
+    border-top:1.2px solid black;
+}
+
+.latex-table th{
+    font-weight:bold;
+    text-align:center;
+}
+
+/* The last 4 columns are always the numeric metrics (SR, SPL, SCT, Tilt),
+   regardless of whether a row also carries the rowspan Terrain cell -
+   counting from the end keeps this correct across rows of differing length. */
+.latex-table td{
+    text-align:left;
+}
+
+.latex-table td:nth-last-child(-n+4){
+    text-align:center;
+}
+
+.best{
+    font-weight:bold;
+}
+
+
+.qual-intro {
+  margin-bottom: 2.5rem;
+}
+
+/* Qualitative results: one row per method, two videos each */
+.video-row:not(:first-child) {
+  margin-top: 3rem;
+}
+
+.video-row__title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin: 0 0 1.25rem;
+}
+
+.video-row__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.video-item video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  background: #000;
+}
+
+.video-item__caption {
+  margin: 0.65rem 0 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* Key results */
+.key-results-list {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.key-results-list li {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.key-results-list li:not(:last-child) {
+  margin-bottom: 1.1rem;
+}
+
+.key-results-list li strong {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
 
 /* Mobile Responsive Improvements */
 @media screen and (max-width: 768px) {
@@ -673,6 +788,18 @@ code {
   
   .content.has-text-justified {
     font-size: 1rem;
+  }
+
+  .video-row__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-row__title {
+    font-size: 1.2rem;
+  }
+
+  .latex-table {
+    font-size: 0.85rem;
   }
 }
 

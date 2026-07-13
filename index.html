@@ -68,8 +68,6 @@
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
 
@@ -85,28 +83,20 @@
   <link rel="stylesheet" href="static/css/index.css">
   
   <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
+
   <!-- Fallback for browsers that don't support preload -->
   <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
+
   <!-- Fonts - Optimized loading -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
   <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
   
   <!-- Structured Data for Academic Papers -->
@@ -141,13 +131,13 @@
     },
     "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
     "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["multi-agent", "reinforcement learning, "robotics"],
-    "abstract": "Cooperative payload transport using a team of quadrupedal robots is essential for applications such as disaster response, autonomous logistics and planetary exploration, where large
-            payloads must be transported over uneven terrain. We propose DETOUR, a hierarchical reinforcement learning framework for cooperative multi-quadruped payload transport that performs map-free 
-            local reactive planning through temporal abstraction. DETOUR decomposes the task into a high-level terrain-aware manager that generates intermediate navigation subgoals and a low-level worker 
-            that executes cooperative payload transport. This hierarchical formulation enables long-horizon reactive navigation while preserving robust terrain-aware locomotion. Experimental results on 
-            procedurally generated terrains demonstrate that DETOUR consistently outperforms flat goal-conditioned reinforcement learning baselines in goal-reaching performance, navigation efficiency, and 
-            payload transport stability, while exhibiting emergent obstacle-aware detour behaviors. [ADD FINAL QUANTITATIVE RESULTS HERE]",
+    "keywords": ["multi-agent", "reinforcement learning", "robotics"],
+    "abstract": "Cooperative payload transport using teams of quadrupedal robots is essential for applications such as disaster response, autonomous logistics, and planetary exploration, where 
+                large payloads must be transported over uneven terrain. We propose DETOUR, a hierarchical reinforcement learning framework for cooperative multi-quadruped payload transport that 
+                performs map-free local reactive planning using hierarchical temporal abstraction. DETOUR decomposes the task into a high-level terrain-aware manager that generates intermediate 
+                navigation subgoals and a low-level worker that executes terrain-aware cooperative locomotion. This hierarchical formulation enables long-horizon reactive navigation while preserving 
+                stable cooperative transport. Experimental results demonstrate that DETOUR consistently outperforms a flat goal-conditioned RL baseline, improving the average Success Rate by 49\% across 
+                three evaluation terrains while exhibiting emergent obstacle-aware detour and steer-back behaviors.",
     "citation": "BIBTEX_CITATION_HERE",
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
@@ -261,7 +251,7 @@ Payload Transport</h1>
 
                   <div class="is-size-5 publication-authors">
                     <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Indian Institute of Technology Madras<!--<br>Conference name and year--></span>
+                    <span class="author-block"><a href="https://sites.google.com/view/anujtiwariuw/home" target="_blank">Distributed Intelligence & Robotics (DIRo) Lab</a>, Indian Institute of Technology Madras<!--<br>Conference name and year--></span>
                     <!-- TODO: Remove this line if no equal contribution -->
                     <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
@@ -280,7 +270,7 @@ Payload Transport</h1>
                     </span>
 
                     <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -288,7 +278,7 @@ Payload Transport</h1>
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
@@ -326,7 +316,7 @@ Payload Transport</h1>
     <div class="hero-body">
       <img class="teaser-figure" src="static/images/arch_hrl_improved.png" alt="DETOUR HRL framework architecture">
       <h3 class="teaser-caption has-text-centered">
-        Overview of the DETOUR hierarchical reinforcement learning framework: a high-level manager (2 Hz) generates local subgoals for a low-level worker (50 Hz) that executes cooperative payload transport across the multi-robot agent team.
+        Overview of the DETOUR framework. A high-level manager generates terrain-aware navigation subgoals, which are executed by a low-level worker to coordinate cooperative payload transport across multiple quadrupedal robots.
       </h3>
     </div>
   </div>
@@ -342,12 +332,12 @@ Payload Transport</h1>
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Cooperative payload transport using a team of quadrupedal robots is essential for applications such as disaster response, autonomous logistics and planetary exploration, where large
-            payloads must be transported over uneven terrain. We propose DETOUR, a hierarchical reinforcement learning framework for cooperative multi-quadruped payload transport that performs map-free 
-            local reactive planning through temporal abstraction. DETOUR decomposes the task into a high-level terrain-aware manager that generates intermediate navigation subgoals and a low-level worker 
-            that executes cooperative payload transport. This hierarchical formulation enables long-horizon reactive navigation while preserving robust terrain-aware locomotion. Experimental results on 
-            procedurally generated terrains demonstrate that DETOUR consistently outperforms flat goal-conditioned reinforcement learning baselines in goal-reaching performance, navigation efficiency, and 
-            payload transport stability, while exhibiting emergent obstacle-aware detour behaviors. [ADD FINAL QUANTITATIVE RESULTS HERE]
+            Cooperative payload transport using teams of quadrupedal robots is essential for applications such as disaster response, autonomous logistics, and planetary exploration, where 
+            large payloads must be transported over uneven terrain. We propose <b>DETOUR</b>, a hierarchical reinforcement learning framework for cooperative multi-quadruped payload transport that 
+            performs map-free local reactive planning using hierarchical temporal abstraction. DETOUR decomposes the task into a high-level terrain-aware manager that generates intermediate 
+            navigation subgoals and a low-level worker that executes terrain-aware cooperative locomotion. This hierarchical formulation enables long-horizon reactive navigation while preserving 
+            stable cooperative transport. Experimental results demonstrate that DETOUR consistently outperforms a flat goal-conditioned RL baseline, improving the average Success Rate by <b>49%</b> across 
+            three evaluation terrains while exhibiting emergent obstacle-aware detour and steer-back behaviors.
           </p>
         </div>
       </div>
@@ -357,123 +347,311 @@ Payload Transport</h1>
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+<!-- Qualitative Results: video grid -->
+<section class="section" id="qualitative-results">
+  <div class="container is-widescreen">
+    <div class="container is-max-desktop qual-intro">
+      <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
+      <div class="content has-text-justified">
+        <p>
+          <!-- TODO: Replace with a short framing sentence for the video grid below -->
+          We demonstrate DETOUR's reactive planning capabilities across different manager horizons, recurrent and feed-forward managers, and multi-robot embodiments. The videos highlight emergent 
+          obstacle-aware detour and steer-back behaviors while comparing against a flat goal-conditioned RL baseline.
+        </p>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
+    </div>
+
+    <div class="video-row">
+      <h3 class="video-row__title">Flat RL (Baseline)</h3>
+      <div class="video-row__grid">
+        <div class="video-item">
+          <video controls muted loop preload="metadata" autoplay>
+            <source src="static/videos/flatrl_fail_video_1.mp4" type="video/mp4">
+          </video>
+          <p class="video-item__caption">Navigation Failure, Agent "Stuck"</p>
+        </div>
+        <div class="video-item">
+          <video controls muted loop preload="metadata" autoplay>
+            <source src="static/videos/flatrl_fail_video_2.mp4" type="video/mp4">
+          </video>
+          <p class="video-item__caption">Full goal-reaching trial, with Failure</p>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+    </div>
+
+    <div class="video-row">
+      <h3 class="video-row__title">DETOUR &ndash; 15</h3>
+      <div class="video-row__grid">
+        <div class="video-item">
+          <video controls muted loop preload="metadata" autoplay>
+            <source src="static/videos/detour_15_video_1.mp4" type="video/mp4">
+          </video>
+          <p class="video-item__caption">Reactive Detour Behaviour</p>
+        </div>
+        <div class="video-item">
+          <video controls muted loop preload="metadata" autoplay>
+            <source src="static/videos/detour_15_video_2.mp4" type="video/mp4">
+          </video>
+          <p class="video-item__caption">Full goal-reaching trial</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-row">
+      <h3 class="video-row__title">DETOUR &ndash; 30</h3>
+      <div class="video-row__grid">
+        <div class="video-item">
+          <video controls muted loop preload="metadata" autoplay>
+            <source src="static/videos/detour_30_video_1.mp4" type="video/mp4">
+          </video>
+          <p class="video-item__caption">Simple Detour with Slight Steer-Back</p>
+        </div>
+        <div class="video-item">
+          <video controls muted loop preload="metadata" autoplay>
+            <source src="static/videos/detour_30_video_2.mp4" type="video/mp4">
+          </video>
+          <p class="video-item__caption">Full goal-reaching trial</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-row">
+      <h3 class="video-row__title">DETOUR-GRU (Manager Horizon c=30)</h3>
+      <div class="video-row__grid">
+        <div class="video-item">
+          <video controls muted loop preload="metadata" autoplay>
+            <source src="static/videos/detour_gru_video_1.mp4" type="video/mp4">
+          </video>
+          <p class="video-item__caption">Simple Detour Behaviour</p>
+        </div>
+        <div class="video-item">
+          <video controls muted loop preload="metadata" autoplay>
+            <source src="static/videos/detour_gru_video_2.mp4" type="video/mp4">
+          </video>
+          <p class="video-item__caption">Full goal-reaching trial</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-row">
+      <h3 class="video-row__title">DETOUR &ndash; TRIO: 3-Robot Circular Payload (Manager: DETOUR-30)</h3>
+      <div class="video-row__grid">
+        <div class="video-item">
+          <video controls muted loop preload="metadata" autoplay>
+            <source src="static/videos/detour_trio_video_1.mp4" type="video/mp4">
+          </video>
+          <p class="video-item__caption">Simple Detour Behaviour</p>
+        </div>
+        <div class="video-item">
+          <video controls muted loop preload="metadata" autoplay>
+            <source src="static/videos/detour_trio_video_2.mp4" type="video/mp4">
+          </video>
+          <p class="video-item__caption">Full goal-reaching trial</p>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
+<!-- End qualitative results -->
 
 
+<!-- Quantitative Results: table -->
+<section class="section hero is-light" id="quantitative-results">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Quantitative Results</h2>
+    <div class="content has-text-justified">
+      <p>
+        We compare DETOUR against all policy variants on procedurally generated terrains of increasing difficulty. Reported metrics are averaged over 
+        five independent evaluation runs and quantify task success (<b>SR</b>), navigation efficiency (<b>SPL</b> and <b>SCT</b>), and payload transport stability (<b>Mean Tilt</b>).
+      </p>
+    </div>
+
+    <div class="table-container">
+      <table class="latex-table">
+        <thead>
+            <tr>
+                <th>Terrain</th>
+                <th>Method</th>
+                <th>SR ↑</th>
+                <th>SPL ↑</th>
+                <th>SCT ↑</th>
+                <th>Mean Tilt (°) ↓</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td rowspan="4"><b>Simple</b></td>
+                <td>Flat RL</td>
+                <td>58.8</td>
+                <td>0.579 ± 0.037</td>
+                <td>0.392 ± 0.030</td>
+                <td>1.764 ± 0.170</td>
+            </tr>
+
+            <tr  class="best">
+                <td>DETOUR-15</td>
+                <td>83.6</td>
+                <td>0.778 ± 0.045</td>
+                <td>0.553 ± 0.071</td>
+                <td>1.908 ± 0.159</td>
+            </tr>
+
+            <tr>
+                <td>DETOUR-30</td>
+                <td>82.0</td>
+                <td>0.769 ± 0.043</td>
+                <td>0.463 ± 0.022</td>
+                <td>1.743 ± 0.141</td>
+            </tr>
+
+            <tr>
+                <td>DETOUR-GRU</td>
+                <td>74.8</td>
+                <td>0.648 ± 0.043</td>
+                <td>0.402 ± 0.042</td>
+                <td>1.814 ± 0.273</td>
+            </tr>
+
+            <tr class="section-divider">
+                <td colspan="6"></td>
+            </tr>
+
+            <tr>
+                <td rowspan="4"><b>Medium</b></td>
+                <td>Flat RL</td>
+                <td>53.2</td>
+                <td>0.524 ± 0.112</td>
+                <td>0.355 ± 0.070</td>
+                <td>1.708 ± 0.058</td>
+            </tr>
+
+            <tr>
+                <td>DETOUR-15</td>
+                <td>72.4</td>
+                <td>0.651 ± 0.101</td>
+                <td>0.453 ± 0.073</td>
+                <td>1.938 ± 0.198</td>
+            </tr>
+
+            <tr class="best">
+                <td>DETOUR-30</td>
+                <td>74.8</td>
+                <td>0.678 ± 0.074</td>
+                <td>0.392 ± 0.041</td>
+                <td>1.458 ± 0.090</td>
+            </tr>
+
+            <tr>
+                <td>DETOUR-GRU</td>
+                <td>70.0</td>
+                <td>0.639 ± 0.066</td>
+                <td>0.399 ± 0.044</td>
+                <td>1.704 ± 0.160</td>
+            </tr>
+
+            <tr class="section-divider">
+                <td colspan="6"></td>
+            </tr>
+
+            <tr>
+                <td rowspan="4"><b>Hard</b></td>
+                <td>Flat RL</td>
+                <td>43.6</td>
+                <td>0.433 ± 0.082</td>
+                <td>0.294 ± 0.062</td>
+                <td>1.618 ± 0.114</td>
+            </tr>
+
+            <tr class="best">
+                <td>DETOUR-15</td>
+                <td>72.0</td>
+                <td>0.640 ± 0.058</td>
+                <td>0.443 ± 0.106</td>
+                <td>2.042 ± 0.335</td>
+            </tr>
+
+            <tr>
+                <td>DETOUR-30</td>
+                <td>71.2</td>
+                <td>0.652 ± 0.092</td>
+                <td>0.380 ± 0.049</td>
+                <td>1.675 ± 0.124</td>
+            </tr>
+
+            <tr>
+                <td>DETOUR-GRU</td>
+                <td>52.0</td>
+                <td>0.475 ± 0.103</td>
+                <td>0.302 ± 0.071</td>
+                <td>1.850 ± 0.143</td>
+            </tr>
+
+        </tbody>
+      </table>
+      
+    </div>
+  </div>
+</section>
+<!-- End quantitative results -->
 
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container"> -->
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+      <!-- <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          
-          <div class="publication-video">
+
+          <div class="publication-video"> -->
             <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </div> -->
+<!-- </section> -->
 <!-- End youtube video -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
+<!-- Key Results -->
+<section class="section hero is-light" id="key-results">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Key Results</h2>
+    <ul class="key-results-list">
+      <li>
+        <strong>Map-free Reactive Planning:</strong>
+        DETOUR learns terrain-aware reactive navigation directly from reinforcement learning, eliminating the need for global maps,
+        predefined trajectories or external waypoint planners.
+      </li>
+      <li>
+        <strong>Emergent Reactive Behaviors:</strong>
+        The hierarchical manager learns <b>obstacle-aware detour</b> and <b>steer-back</b> behaviors without explicit supervision or handcrafted recovery strategies.
+      </li>
+      <li>
+        <strong>Consistent Performance Gains:</strong>
+        Across Simple, Medium and Hard terrains, DETOUR consistently outperforms a flat goal-conditioned RL baseline in Success Rate, SPL, SCT.
+      </li>
+      <li>
+        <strong>Importance of Temporal Abstraction:</strong>
+        An intermediate manager horizon provides the best trade-off between long-horizon planning and reactive replanning, with c=(15,30) achieving the highest overall performance.
+      </li>
+      <li>
+        <strong>Fewer Navigation Failures:</strong>
+        Failure mode analysis shows that DETOUR substantially reduces navigation failures, enabling the robot team to escape local minima and negotiate cluttered terrain more effectively than Flat RL.
+      </li>
+      <li>
+        <strong>Embodiment Transfer:</strong>
+        The hierarchical formulation naturally extends to different cooperative transport configurations. The same high-level manager can be retained while only retraining the worker policy for new robot team sizes or payload geometries.
+      </li>
+    </ul>
   </div>
 </section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
+<!-- End key results -->
 
 
 <!--BibTex citation -->
